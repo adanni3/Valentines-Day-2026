@@ -101,9 +101,9 @@ export function WelcomeScreen({ onChoice }: WelcomeScreenProps) {
               alt="heart"
               className="w-8 h-8"
               style={{ 
-                //imageRendering: 'pixelated',
-                //filter: 'drop-shadow(0 0 4px rgba(255, 68, 68, 0.8))',
-                backgroundColor: '#4a3b5c',
+                imageRendering: 'pixelated',
+                filter: 'drop-shadow(0 0 4px rgba(255, 68, 68, 0.8))',
+                //backgroundColor: '#4a3b5c',
               }}
             />
           ))}

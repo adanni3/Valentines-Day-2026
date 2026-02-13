@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
-import pixelHeartRed from '../assets/pixelHeartRed.png';
-import pixelHeartPink from '../assets/pixelHeartPink.png';
-//import cupidTwo from '../assets/3c2d27170072cfac5a0e2af2290285d7e3463e02.png';
-import cupidOne from '../assets/—Pngtree—cupid love angel cartoon vector_5743786.png';
+import pixelHeart from '../assets/e801ac362de9eb6d95183d4fc3bf1ba8.png';
+import pixelHeartRed from '../assets/ca98284d8e2ff4cd08fc1f5ec9a0db5f.png';
+import pixelHeartPink from '../assets/d0dbd07685dc5528499d56e566d84b16.png';
+import cupidTwo from '../assets/6f339c0c192c91405675f4c1798c845e.png';
+import cupidOne from '../assets/1a5f1705595e0d793556155b696bcf10.png';
+import cupidThree from '../assets/bc3eec7fe727907ed612d5d117cf568d.png';
 
 interface AnimationScreenProps {
   onNext: () => void;
@@ -14,9 +16,9 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
 
   useEffect(() => {
     // Generate floating hearts with mixed images
-    const heartArray = Array.from({ length: 20 }, (_, i) => ({
+    const heartArray = Array.from({ length: 30 }, (_, i) => ({
       id: i,
-      x: Math.random() * 100,
+      x: (Math.random() * 200)-40,
       delay: Math.random() * 2,
       image: i % 2 === 0 ? pixelHeartRed : pixelHeartPink,
     }));
@@ -30,7 +32,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
     // Auto advance after animation completes
     const autoAdvance = setTimeout(() => {
       onNext();
-    }, 4500);
+    }, 5000);
 
     return () => {
       clearTimeout(timer);
@@ -85,14 +87,44 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
         style={{
           right: '10%',
           animation: 'fly-across-reverse 10s linear infinite',
+          top: '25%',
+        }}
+      >
+        <img 
+          src={cupidTwo}
+          alt="cupid"
+          className="w-20 h-20"
+          style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
+        />
+      </div>
+      <div
+        className="absolute"
+        style={{
+          left: '10%',
+          animation: 'fly-across 8s linear infinite',
           top: '60%',
         }}
       >
         <img 
-          src={cupidOne}
+          src={cupidThree}
           alt="cupid"
           className="w-20 h-20"
-          style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
+          style={{ imageRendering: 'pixelated' }}
+        />
+      </div>
+      <div
+        className="absolute"
+        style={{
+          right: '10%',
+          animation: 'fly-across-reverse 10s linear infinite',
+          top: '60%',
+        }}
+      >
+        <img 
+          src={cupidThree}
+          alt="cupid"
+          className="w-20 h-20"
+          style={{ imageRendering: 'pixelated' }}
         />
       </div>
 
@@ -104,13 +136,13 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
       >
         <div className="bg-[#4a3b5c] rounded-2xl p-8 md:p-12 pixel-border">
           <img 
-            src={pixelHeartRed}
+            src={pixelHeart}
             alt="heart"
             className="w-20 h-20 mx-auto mb-4 float"
             style={{
               imageRendering: 'pixelated',
               filter: 'drop-shadow(0 0 20px rgba(255, 68, 68, 0.8))',
-              backgroundColor: '#4a3b5c',
+              //backgroundColor: '#4a3b5c',
             }}
           />
           <h2 

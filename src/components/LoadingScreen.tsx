@@ -8,6 +8,7 @@ import pixelHeartPinkUrl from '../assets/315e92792f8c505061decd0823fc2307.png';
 
 // Import single cupid image for all corners
 import cupidUrl from '../assets/—Pngtree—cupid love angel cartoon vector_5743786.png';
+import cupidTwo from '../assets/e4d8e8c45e557c0b0b2e691567d9de19.png';
 
 interface LoadingScreenProps {
   onNext: (pixelatedData: UserData) => void;
@@ -106,7 +107,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
   return (
     <div 
       className="w-full h-screen flex items-center justify-center relative"
-      style={{ backgroundColor: '#421652' }}
+      style={{ backgroundColor: '#292035' }}
     >      {/* Corner Cupids - using single cupid.png with float animation */}
       {/* Top Left */}
       <div 
@@ -157,10 +158,10 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         }}
       >
         <img 
-          src={cupidUrl} 
+          src={cupidTwo} 
           alt="Cupid" 
           className="w-20 h-20"
-          style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
+          style={{ imageRendering: 'pixelated' }}
         />
       </div>
 
@@ -176,10 +177,10 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         }}
       >
         <img 
-          src={cupidUrl} 
+          src={cupidTwo} 
           alt="Cupid" 
           className="w-20 h-20"
-          style={{ imageRendering: 'pixelated' }}
+          style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
         />
       </div>
       {/* Outer dashed border - z-0 to be behind central panel */}
@@ -199,7 +200,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
       <div 
         className="relative rounded-2xl p-8"
         style={{ 
-          backgroundColor: '#3e3242', // Match container background
+          backgroundColor: '#543b72', // Match container background
           boxShadow: '0 0 40px rgba(255, 107, 157, 0.4), 0 0 80px rgba(255, 107, 157, 0.2), inset 0 0 20px rgba(255, 107, 157, 0.1)',
           minWidth: '300px',
           maxWidth: '360px',

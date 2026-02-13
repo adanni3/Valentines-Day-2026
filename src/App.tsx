@@ -18,7 +18,7 @@ export interface UserData {
 
 // DEBUG: Set this to any screen to debug it in isolation
 // Options: 'welcome' | 'message' | 'no-message' | 'animation' | 'no-animation' | 'input' | 'loading' | 'congratulations'
-const DEBUG_SCREEN: Screen | null = 'loading';
+const DEBUG_SCREEN: Screen | null = 'welcome';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>(DEBUG_SCREEN || 'welcome');

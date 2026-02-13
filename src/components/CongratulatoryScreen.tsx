@@ -145,11 +145,15 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
             </div>
           ))}
 
-          <div className='flex w-full max-w-3xl mx-auto justify-center'>
+          <div className='flex w-full max-w-5xl mx-auto justify-center'>
 
 
           {/* Floating hearts decoration - positioned close to the content card */}
-          <div className="absolute top-30% left-[calc(10%-420px)] item-start float z-50">
+          <div className="absolute float z-50"
+          style={{
+            top: '35%',
+            left:'20%'
+          }}>
             <img 
               src={pixelHeart}
               alt="heart"
@@ -161,12 +165,14 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
               }}
             />
           </div>
-          <div className="fixed top-30 right-[calc(50%-420px)] float z-0" style={{ animationDelay: '0.5s' }}>
+          <div className="absolute float z-50" style={{ animationDelay: '0.5s',
+          top: '35%',
+          right: '20%'}}>
             <img 
               src={pixelHeart}
               alt="heart"
               className="w-12 h-12 md:w-16 md:h-16"
-              style={{ 
+              style={{                 
                 imageRendering: 'pixelated', 
                 filter: 'drop-shadow(0 0 8px rgba(255, 68, 68, 0.8))',
                 //backgroundColor: '#4a3b5c',
@@ -224,93 +230,96 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
               </div>
             </div>
 
-            {/* Trophy and content */}
-            <div className="text-center">
-              {/* Pixelated image thumbnail with floating download button */}
-              {userData.image && (
-                <div className="my-4 flex flex-col items-center gap-3 relative inline-block">
-                  <div className="relative inline-block">
-                    {/* Pixelated image canvas */}
-                    <canvas
-                      ref={canvasRef}
-                      onClick={openFullscreen}
-                      className="rounded-lg border-4 border-[#ffcc00] cursor-pointer hover:border-[#ffdd44] transition-colors"
-                      style={{
-                        imageRendering: 'pixelated',
-                        boxShadow: '0 0 20px rgba(255, 204, 0, 0.5)',
-                        maxWidth: '200px',
-                      }}
-                      title="Click to view fullscreen"
-                    />
+              {/* Trophy and content */}
+              <div className="text-center">
+                {/* Pixelated image thumbnail with floating download button */}
+                {userData.image && (
+                  <div className="my-4 flex flex-col items-center gap-3 relative inline-block">
                     
-                    {/* Fullscreen button overlay */}
-                    <div 
-                      className="absolute top-2 right-2 opacity-0 hover:opacity-100 transition-opacity"
-                      style={{ transform: 'translate(25%, -25%)' }}
-                    >
-                      <div className="bg-black/50 rounded-full p-1">
-                        <Maximize2 className="w-4 h-4 text-white" />
+                    <div className="relative inline-block">
+                      {/* Pixelated image canvas */}
+                      <canvas
+                        ref={canvasRef}
+                        onClick={openFullscreen}
+                        className="rounded-lg border-4 border-[#ffcc00] cursor-pointer hover:border-[#ffdd44] transition-colors"
+                        style={{
+                          imageRendering: 'pixelated',
+                          boxShadow: '0 0 20px rgba(255, 204, 0, 0.5)',
+                          maxWidth: '200px',
+                        }}
+                        title="Click to view fullscreen"
+                      />
+                      
+                      {/* Fullscreen button overlay */}
+                      <div 
+                        className="absolute top-2 right-2 opacity-0 hover:opacity-100 transition-opacity"
+                        style={{ transform: 'translate(25%, -25%)' }}
+                      >
+                        <div className="bg-black/50 rounded-full p-1">
+                          <Maximize2 className="w-4 h-4 text-white" />
+                        </div>
                       </div>
+
+                      {/* Floating download button at bottom-right */}
+                      <button
+                        onClick={handleDownload}
+                        className="absolute -bottom-2 -right-2 pixel-font text-xs px-3 py-2 bg-[#ff6b9d] text-white rounded-lg hover:bg-[#ff4477] transition-colors flex items-center gap-2 z-10"
+                        style={{ 
+                          boxShadow: '0 4px 0 #c74272, 0 8px 20px rgba(0,0,0,0.3)',
+                        }}
+                      >
+                        <Download className="w-4 h-4" />
+                        <span className="hidden md:inline">DOWNLOAD</span>
+                      </button>
                     </div>
-
-                    {/* Floating download button at bottom-right */}
-                    <button
-                      onClick={handleDownload}
-                      className="absolute -bottom-2 -right-2 pixel-font text-xs px-3 py-2 bg-[#ff6b9d] text-white rounded-lg hover:bg-[#ff4477] transition-colors flex items-center gap-2 z-10"
-                      style={{ 
-                        boxShadow: '0 4px 0 #c74272, 0 8px 20px rgba(0,0,0,0.3)',
-                      }}
-                    >
-                      <Download className="w-4 h-4" />
-                      <span className="hidden md:inline">DOWNLOAD</span>
-                    </button>
                   </div>
-                </div>
-              )}
+                )}
+                
 
-              <p className="pixel-font text-xs text-white mb-4 leading-relaxed max-w-md mx-auto mt-6">
-                HERE A 90'S RETRO PIC OF YOU,<br/>
-                WASN'T THAT FUN TO SEE 😄<br/>
-                YOU WOULD HAVE BEEN AS CUTE THEN<br/>
-                AS YOU ARE NOW🤗
-              </p>
-
-              <div className="mb-6">
-                <p className="pixel-font text-sm text-[#ffcc00]">
-                  BEAUTY POINTS: INFINITE ✨
+                <p className="pixel-font text-xs text-white mb-4 leading-relaxed max-w-md mx-auto mt-6">
+                  HERE A 90'S RETRO PIC OF YOU,<br/>
+                  WASN'T THAT FUN TO SEE 😄<br/>
+                  YOU WOULD HAVE BEEN AS CUTE THEN<br/>
+                  AS YOU ARE NOW🤗
                 </p>
-              </div>
 
-              {/* Hearts decoration */}
-              <div className="flex justify-center gap-2 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <img
-                    key={i}
-                    src={i % 2 === 0 ? pixelHeartRed : pixelHeartPink}
-                    alt="heart"
-                    className="w-8 h-8"
-                    style={{ 
-                      imageRendering: 'pixelated',
-                      filter: 'drop-shadow(0 0 4px rgba(255, 68, 68, 0.8))',
-                      animation: 'float 2s ease-in-out infinite',
-                      animationDelay: `${i * 0.2}s`,
-                      backgroundColor: '#4a3b5c',
-                    }}
-                  />
-                ))}
-              </div>
+                <div className="mb-6">
+                  <p className="pixel-font text-sm text-[#ffcc00]">
+                    BEAUTY POINTS: INFINITE ✨
+                  </p>
+                </div>
 
-              {/* Play again button */}
-              <button
-                onClick={onRestart}
-                className="pixel-font text-sm px-8 py-3 bg-[#ff6b9d] text-white rounded-lg hover:bg-[#ff4477] transition-colors"
-                style={{ 
-                  boxShadow: '0 4px 0 #c74272, 0 8px 20px rgba(0,0,0,0.3)',
-                }}
-              >
-                ► PLAY AGAIN
-              </button>
-            </div>
+                {/* Hearts decoration */}
+                <div className="flex justify-center gap-2 mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <img
+                      key={i}
+                      src={i % 2 === 0 ? pixelHeartRed : pixelHeartPink}
+                      alt="heart"
+                      className="w-8 h-8"
+                      style={{ 
+                        imageRendering: 'pixelated',
+                        filter: 'drop-shadow(0 0 4px rgba(255, 68, 68, 0.8))',
+                        animation: 'float 2s ease-in-out infinite',
+                        animationDelay: `${i * 0.2}s`,
+                        backgroundColor: '#4a3b5c',
+                      }}
+                    />
+                  ))}
+                </div>
+
+                {/* Play again button */}
+                <button
+                  onClick={onRestart}
+                  className="pixel-font text-sm px-8 py-3 bg-[#ff6b9d] text-white rounded-lg hover:bg-[#ff4477] transition-colors"
+                  style={{ 
+                    boxShadow: '0 4px 0 #c74272, 0 8px 20px rgba(0,0,0,0.3)',
+                  }}
+                >
+                  ► PLAY AGAIN
+                </button>
+              </div>
+            
 
             {/* Bottom decoration */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1">

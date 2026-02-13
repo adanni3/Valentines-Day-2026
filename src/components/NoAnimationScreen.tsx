@@ -12,9 +12,9 @@ export function NoAnimationScreen({ onNext }: NoAnimationScreenProps) {
 
   useEffect(() => {
     // Generate floating sad hearts
-    const heartArray = Array.from({ length: 12 }, (_, i) => ({
+    const heartArray = Array.from({ length: 40 }, (_, i) => ({
       id: i,
-      x: Math.random() * 100,
+      x: (Math.random() * 200)-40,
       delay: Math.random() * 2,
       scale: 0.5 + Math.random() * 0.5,
     }));
@@ -28,7 +28,7 @@ export function NoAnimationScreen({ onNext }: NoAnimationScreenProps) {
     // Auto advance after animation completes
     const autoAdvance = setTimeout(() => {
       onNext();
-    }, 3500);
+    }, 5000);
 
     return () => {
       clearTimeout(timer);
@@ -48,7 +48,6 @@ export function NoAnimationScreen({ onNext }: NoAnimationScreenProps) {
             animation: `float-sad 4s ease-in infinite`,
             animationDelay: `${heart.delay}s`,
             bottom: '-50px',
-            transform: `scale(${heart.scale})`,
           }}
         >
           <img 
@@ -57,7 +56,7 @@ export function NoAnimationScreen({ onNext }: NoAnimationScreenProps) {
             className="w-8 h-8 opacity-70"
             style={{ 
               imageRendering: 'pixelated',
-              //filter: 'drop-shadow(0 0 8px rgba(255, 107, 157, 0.6))',
+              filter: 'drop-shadow(0 0 8px rgba(255, 107, 157, 0.6))',
               opacity: 0.7,
               //backgroundColor: '#4a3b5c',
             }}
