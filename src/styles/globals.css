@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'PixelFont';
+  src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+:root {
+  --retro-purple: #4a3b5c;
+  --retro-dark-purple: #2d2438;
+  --retro-pink: #ff6b9d;
+  --retro-yellow: #ffcc00;
+  --retro-red: #ff4444;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--retro-dark-purple);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--retro-dark-purple);
+  border-left: 2px solid var(--retro-purple);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--retro-pink) 0%, var(--retro-purple) 100%);
+  border-radius: 6px;
+  border: 2px solid var(--retro-dark-purple);
+  box-shadow: 0 0 8px rgba(255, 107, 157, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff4477 0%, #5a4b6c 100%);
+  box-shadow: 0 0 12px rgba(255, 107, 157, 0.8);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--retro-pink) var(--retro-dark-purple);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.pixel-font {
+  font-family: 'Press Start 2P', cursive;
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1) 0px,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+.pixel-border {
+  box-shadow: 
+    0 0 0 2px var(--retro-purple),
+    0 0 0 4px var(--retro-dark-purple),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cupid-float-left {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes cupid-float-right {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}

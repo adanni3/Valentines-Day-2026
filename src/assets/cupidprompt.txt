@@ -1,0 +1,27 @@
+I need to fix the visual layering and distortion issues for my React surprise gift. Please apply these specific updates:
+
+The 'Top Layer' Fix (Portal): > Use ReactDOM.createPortal to render the final surprise image into a div with id="portal-root" (outside the main app tree). This ensures the image is never stuck behind the loading screen or UI panels.
+
+Sharpness & Scaling (CSS): > Style the surprise image with image-rendering: pixelated and image-rendering: crisp-edges. Set the CSS object-fit property to contain and width/height to 100% of its fixed-position container. This prevents the face from being stretched or blurred while filling the screen.
+
+The Full-Screen Container: > Wrap the image in a div styled with position: fixed, top: 0, left: 0, width: 100vw, height: 100vh, and zIndex: 9999.
+
+Entrance Animation: > Use a simple CSS transition or Framer Motion to fade the opacity from 0 to 1 over 1.5 seconds once the loading state is 'ready'.
+
+Update my current React loading component to match this specific design:
+
+Layout & Container: Wrap the entire screen in a div with a deep purple background (#2D1B33). Add a large outer border with a dashed stroke (#EF7D57) and a 60px padding/inset so the content doesn't touch the edges.
+
+Cupid Placement: Absolute position four Cupid images (cupid.png) in the four corners of the dashed border. Add a CSS keyframe animation called float to make them gently move up and down by 10px.
+
+The Center Card: Create a rounded-corner central panel with a box-shadow pink neon glow.
+
+Header Ribbon: Add a pink banner at the top of the card with the text 'VALENTINE'S DAY' in a white pixel font.
+
+Central Icon: Inside the card, display a circular speech bubble containing a small pixelated heart.
+
+Progress Bars: Implement two bars. The top bar should have a pink/white diagonal stripe pattern (use a linear-gradient). The bottom bar should be a solid glowing pink.
+
+Footer Icons: At the bottom of the card, place a gift emoji, a '✓ READY!' text label, and a pink envelope emoji in a horizontal row.
+
+Typography: Use a retro pixel font (like 'Press Start 2P') for the 'PROCESSING...', '100% COMPLETE', and 'ALMOST DONE...' labels."
