@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { WelcomeScreen } from './components/WelcomeScreen';
 import { MessageScreen } from './components/MessageScreen';
 import { NoMessageScreen } from './components/NoMessageScreen';
@@ -8,6 +8,24 @@ import { LoadingScreen } from './components/LoadingScreen';
 import { InputScreen } from './components/InputScreen';
 import { CongratulatoryScreen } from './components/CongratulatoryScreen';
 import { MusicPlayer } from './components/MusicPlayer';
+
+// Preload animation images for faster loading
+import pixelHeart from './assets/e801ac362de9eb6d95183d4fc3bf1ba8.png';
+import pixelHeartRed from './assets/ca98284d8e2ff4cd08fc1f5ec9a0db5f.png';
+import pixelHeartPink from './assets/d0dbd07685dc5528499d56e566d84b16.png';
+import cupidOne from './assets/1a5f1705595e0d793556155b696bcf10.png';
+import cupidTwo from './assets/6f339c0c192c91405675f4c1798c845e.png';
+import cupidThree from './assets/bc3eec7fe727907ed612d5d117cf568d.png';
+
+// Images to preload
+const imagesToPreload = [
+  pixelHeart,
+  pixelHeartRed,
+  pixelHeartPink,
+  cupidOne,
+  cupidTwo,
+  cupidThree,
+];
 
 export type Screen = 'welcome' | 'message' | 'no-message' | 'animation' | 'no-animation' | 'input' | 'loading' | 'congratulations';
 
@@ -25,6 +43,19 @@ export default function App() {
   const [userData, setUserData] = useState<UserData>({ image: null, pixelatedImage: null });
   const [isPlaying, setIsPlaying] = useState(false);
   const [showMusicPlayer, setShowMusicPlayer] = useState(false);
+
+  // Auto scroll to top on screen change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentScreen]);
+
+  // Preload animation images for faster screen transitions
+  useEffect(() => {
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   const handleNext = (screen: Screen) => {
     setCurrentScreen(screen);

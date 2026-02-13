@@ -106,7 +106,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
 
   return (
     <div 
-      className="w-full h-screen flex items-center justify-center relative"
+      className="w-full h-screen flex items-center justify-center relative overflow-hidden"
       style={{ backgroundColor: '#292035' }}
     >      {/* Corner Cupids - using single cupid.png with float animation */}
       {/* Top Left */}
