@@ -1,0 +1,7 @@
+node_modules
+plans/
+build/
+dist/
+.env
+src/assets/music/
+src/assets/pics/
