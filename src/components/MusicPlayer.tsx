@@ -1,41 +1,27 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { Play, Pause, Shuffle } from 'lucide-react';
-
-// Import music files from assets folder
-import musicCupid from '../assets/music/FIFTY FIFTY - Cupid (Twin Version) (Lyrics).mp3';
-import musicFriend from '../assets/music/A Friend Like You.mp3';
-import musicLaDaDee from '../assets/music/Cody Simpson - La Da Dee (Official Music Video).mp3';
-import musicGoodVibrations from '../assets/music/Good Vibrations by Ricky Reed  THE EMOJI MOVIE.mp3';
-import musicHappy from "../assets/music/Despicable Me 2 Happy Lyric Video by Pharrell Williams Illumination.mp3";
-import musicCantStopTheFeeling from "../assets/music/Justin Timberlake - Can't Stop The Feeling .mp3";
-import musicWhatILove from "../assets/music/Rio 2 Soundtrack - Track 14 - What Is Love by Janelle Monáe, Anne Hathaway, Jesse Eisenberg.mp3";
-
+import { MUSIC_LIST } from '../constants/assets';
 
 interface MusicPlayerProps {
   isPlaying: boolean;
   setIsPlaying: (playing: boolean) => void;
 }
 
-// Music list with imported file paths
-const MUSIC_LIST = [
-  { id: 1, src: musicCupid, title: 'Cupid - FIFTY FIFTY' },
-  { id: 2, src: musicFriend, title: 'A Friend Like You' },
-  { id: 3, src: musicLaDaDee, title: 'La Da Dee - Cody Simpson' },
-  { id: 4, src: musicGoodVibrations, title: 'Good Vibrations - Ricky Reed' },
-  { id: 5, src: musicHappy, title: 'Happy - Pharrell Williams' },
-  { id: 6, src: musicCantStopTheFeeling, title: "Can't Stop The Feeling - Justin Timberlake" },
-  { id: 7, src: musicWhatILove, title: 'What Is Love - Rio 2 Soundtrack' },
-];
+interface Song {
+  id: number;
+  src: string;
+  title: string;
+}
 
 export function MusicPlayer({ isPlaying, setIsPlaying }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [shuffledList, setShuffledList] = useState<typeof MUSIC_LIST>([]);
+  const [shuffledList, setShuffledList] = useState<Song[]>([]);
   const [currentTitle, setCurrentTitle] = useState('');
 
   // Initialize shuffled list
   useEffect(() => {
-    const shuffled = [...MUSIC_LIST];
+    const shuffled = [...MUSIC_LIST] as Song[];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
@@ -68,7 +54,7 @@ export function MusicPlayer({ isPlaying, setIsPlaying }: MusicPlayerProps) {
   }, [isPlaying, setIsPlaying]);
 
   const handleShuffle = useCallback(() => {
-    const shuffled = [...MUSIC_LIST];
+    const shuffled = [...MUSIC_LIST] as Song[];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
@@ -133,4 +119,3 @@ export function MusicPlayer({ isPlaying, setIsPlaying }: MusicPlayerProps) {
     </div>
   );
 }
-

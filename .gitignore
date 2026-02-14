@@ -3,3 +3,5 @@ plans/
 build/
 dist/
 .env
+src/assets/music/
+src/assets/pics/

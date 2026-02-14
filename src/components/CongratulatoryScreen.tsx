@@ -1,8 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { Star, Sparkles, Download, X, Maximize2 } from 'lucide-react';
-import pixelHeart from '../assets/—Pngtree—valentines day 3d stereo love_19771091.png';
-import pixelHeartRed from '../assets/pixelHeartRed.png';
-import pixelHeartPink from '../assets/pixelHeartPink.png';
+import { IMAGES } from '../constants/assets';
 import type { UserData } from '../App';
 
 interface CongratulatoryScreenProps {
@@ -151,11 +149,11 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
           {/* Floating hearts decoration - positioned close to the content card */}
           <div className="absolute float z-50"
           style={{
-            top: '30%',
+            top: '40%',
             left: '15%'
           }}>
             <img 
-              src={pixelHeart}
+              src={IMAGES.VALENTINES_3D_STEREO_LOVE}
               alt="heart"
               className="w-16 h-16"
               style={{ 
@@ -166,10 +164,10 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
             />
           </div>
           <div className="absolute float z-50" style={{ animationDelay: '0.5s',
-          top: '30%',
+          top: '40%',
           right: '15%'}}>
             <img 
-              src={pixelHeart}
+              src={IMAGES.VALENTINES_3D_STEREO_LOVE}
               alt="heart"
               className="w-16 h-16"
               style={{                 
@@ -276,9 +274,11 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
                 )}
                 
 
-                <p className="pixel-font text-xs text-white mb-4 leading-relaxed max-w-md mx-auto mt-6">
-                  HERE A 90'S RETRO PIC OF YOU,<br/>
-                  WASN'T THAT FUN TO SEE 😄<br/>
+                <p className="pixel-font text-xs text-white mb-3 leading-relaxed max-w-md mx-auto mt-6">
+                  HERE'S A RETRO🕹 PIXEL IMAGE OF YOU<br/>
+                  WASN'T THAT FUN TO SEE 😄.<br/>
+                </p>
+                <p className="pixel-font text-xs text-white mb-4 leading-relaxed max-w-md mx-auto mt-3">
                   YOU WOULD HAVE BEEN AS CUTE THEN<br/>
                   AS YOU ARE NOW🤗
                 </p>
@@ -294,7 +294,7 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
                   {[...Array(5)].map((_, i) => (
                     <img
                       key={i}
-                      src={i % 2 === 0 ? pixelHeartRed : pixelHeartPink}
+                      src={i % 2 === 0 ? IMAGES.PIXEL_HEART_RED : IMAGES.PIXEL_HEART_PINK}
                       alt="heart"
                       className="w-8 h-8"
                       style={{ 

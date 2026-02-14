@@ -1,14 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { pixelateImage } from '../utils/pixelate';
 import type { UserData } from '../App';
-
-// Import images from local assets folder
-import pixelHeartRedUrl from '../assets/pixelHeartRed.png';
-import pixelHeartPinkUrl from '../assets/315e92792f8c505061decd0823fc2307.png';
-
-// Import single cupid image for all corners
-import cupidUrl from '../assets/—Pngtree—cupid love angel cartoon vector_5743786.png';
-import cupidTwo from '../assets/e4d8e8c45e557c0b0b2e691567d9de19.png';
+import { IMAGES } from '../constants/assets';
 
 interface LoadingScreenProps {
   onNext: (pixelatedData: UserData) => void;
@@ -120,7 +113,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         }}
       >
         <img 
-          src={cupidUrl} 
+          src={IMAGES.CUPID_LOVE_ANGEL} 
           alt="Cupid" 
           className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
@@ -139,7 +132,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         }}
       >
         <img 
-          src={cupidUrl} 
+          src={IMAGES.CUPID_LOVE_ANGEL} 
           alt="Cupid" 
           className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
@@ -158,7 +151,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         }}
       >
         <img 
-          src={cupidTwo} 
+          src={IMAGES.E4D8E8C4} 
           alt="Cupid" 
           className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
@@ -177,7 +170,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         }}
       >
         <img 
-          src={cupidTwo} 
+          src={IMAGES.E4D8E8C4} 
           alt="Cupid" 
           className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
@@ -253,7 +246,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
               }}
             >
               <img 
-                src={pixelHeartPinkUrl} 
+                src={IMAGES.IMAGE_315E9279} 
                 alt="Heart" 
                 className="w-10 h-10 animate-pulse"
                 style={{ 

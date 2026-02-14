@@ -1,10 +1,5 @@
 import { useEffect, useState } from 'react';
-import pixelHeart from '../assets/e801ac362de9eb6d95183d4fc3bf1ba8.png';
-import pixelHeartRed from '../assets/ca98284d8e2ff4cd08fc1f5ec9a0db5f.png';
-import pixelHeartPink from '../assets/d0c21e4ed9cdf9f26042e7ec5c801c5a.png';
-import cupidTwo from '../assets/6f339c0c192c91405675f4c1798c845e.png';
-import cupidOne from '../assets/1a5f1705595e0d793556155b696bcf10.png';
-import cupidThree from '../assets/bc3eec7fe727907ed612d5d117cf568d.png';
+import { IMAGES } from '../constants/assets';
 
 interface AnimationScreenProps {
   onNext: () => void;
@@ -20,7 +15,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
       id: i,
       x: (Math.random() * 200)-40,
       delay: Math.random() * 2,
-      image: i % 2 === 0 ? pixelHeartRed : pixelHeartPink,
+      image: i % 2 === 0 ? IMAGES.CA98284D : IMAGES.D0C21E4E,
     }));
     setHearts(heartArray);
 
@@ -76,7 +71,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
         }}
       >
         <img 
-          src={cupidOne}
+          src={IMAGES.IMAGE_1A5F1705}
           alt="cupid"
           className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
@@ -91,7 +86,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
         }}
       >
         <img 
-          src={cupidTwo}
+          src={IMAGES.IMAGE_6F339C0C}
           alt="cupid"
           className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
@@ -106,7 +101,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
         }}
       >
         <img 
-          src={cupidThree}
+          src={IMAGES.BC3EEC7F}
           alt="cupid"
           className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
@@ -121,7 +116,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
         }}
       >
         <img 
-          src={cupidThree}
+          src={IMAGES.BC3EEC7F}
           alt="cupid"
           className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
@@ -136,7 +131,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
       >
         <div className="bg-[#4a3b5c] rounded-2xl p-8 md:p-12 pixel-border">
           <img 
-            src={pixelHeart}
+            src={IMAGES.E801AC36}
             alt="heart"
             className="w-20 h-20 mx-auto mb-4 float"
             style={{

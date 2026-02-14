@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import pixelHeartPink from '../assets/ca98284d8e2ff4cd08fc1f5ec9a0db5f.png';
-import pixelHeartStanding from '../assets/e801ac362de9eb6d95183d4fc3bf1ba8.png';
+import { IMAGES } from '../constants/assets';
 
 interface NoAnimationScreenProps {
   onNext: () => void;
@@ -51,7 +50,7 @@ export function NoAnimationScreen({ onNext }: NoAnimationScreenProps) {
           }}
         >
           <img 
-            src={pixelHeartPink}
+            src={IMAGES.CA98284D}
             alt="heart"
             className="w-8 h-8 opacity-70"
             style={{ 
@@ -72,7 +71,7 @@ export function NoAnimationScreen({ onNext }: NoAnimationScreenProps) {
       >
         <div className="bg-[#4a3b5c] rounded-2xl p-8 md:p-10 pixel-border">
           <img 
-            src={pixelHeartStanding}
+            src={IMAGES.E801AC36}
             alt="heart"
             className="w-16 h-16 mx-auto mb-4 float-slow"
             style={{

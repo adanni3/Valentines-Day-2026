@@ -8,23 +8,16 @@ import { LoadingScreen } from './components/LoadingScreen';
 import { InputScreen } from './components/InputScreen';
 import { CongratulatoryScreen } from './components/CongratulatoryScreen';
 import { MusicPlayer } from './components/MusicPlayer';
+import { IMAGES } from './constants/assets';
 
-// Preload animation images for faster loading
-import pixelHeart from './assets/e801ac362de9eb6d95183d4fc3bf1ba8.png';
-import pixelHeartRed from './assets/ca98284d8e2ff4cd08fc1f5ec9a0db5f.png';
-import pixelHeartPink from './assets/d0c21e4ed9cdf9f26042e7ec5c801c5a.png';
-import cupidOne from './assets/1a5f1705595e0d793556155b696bcf10.png';
-import cupidTwo from './assets/6f339c0c192c91405675f4c1798c845e.png';
-import cupidThree from './assets/bc3eec7fe727907ed612d5d117cf568d.png';
-
-// Images to preload
+// Images to preload for faster screen transitions
 const imagesToPreload = [
-  pixelHeart,
-  pixelHeartRed,
-  pixelHeartPink,
-  cupidOne,
-  cupidTwo,
-  cupidThree,
+  IMAGES.E801AC36,       // pixelHeart
+  IMAGES.CA98284D,       // pixelHeartRed
+  IMAGES.D0C21E4E,       // pixelHeartPink
+  IMAGES.IMAGE_1A5F1705, // cupidOne
+  IMAGES.IMAGE_6F339C0C, // cupidTwo
+  IMAGES.BC3EEC7F,       // cupidThree
 ];
 
 export type Screen = 'welcome' | 'message' | 'no-message' | 'animation' | 'no-animation' | 'input' | 'loading' | 'congratulations';

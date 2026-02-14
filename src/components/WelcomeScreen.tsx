@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import pixelHeartRed from '../assets/d0c21e4ed9cdf9f26042e7ec5c801c5a.png';
+import { IMAGES } from '../constants/assets';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface WelcomeScreenProps {
@@ -97,7 +97,7 @@ export function WelcomeScreen({ onChoice }: WelcomeScreenProps) {
           {[...Array(5)].map((_, i) => (
             <img
               key={i}
-              src={pixelHeartRed}
+              src={IMAGES.D0C21E4E}
               alt="heart"
               className="w-6 h-6 md:w-8 md:h-8"
               style={{ 

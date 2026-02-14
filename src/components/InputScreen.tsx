@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Upload } from 'lucide-react';
-import pixelHeartRed from '../assets/2671486e439df42630a31162d01a30fd.png';
+import { IMAGES } from '../constants/assets';
 import type { UserData } from '../App';
 
 interface InputScreenProps {
@@ -40,7 +40,7 @@ export function InputScreen({ onSubmit, onMusicPlayerReady }: InputScreenProps) 
         {/* Header */}
         <div className="text-center mb-8">
           <img 
-            src={pixelHeartRed}
+            src={IMAGES.IMAGE_2671486E}
             alt="heart"
             className="w-16 h-16 mx-auto mb-4 float"
             style={{
