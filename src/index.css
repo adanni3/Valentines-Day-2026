@@ -188,11 +188,10 @@
   }
 
   img, svg, video, canvas, audio, iframe, embed, object {
-    vertical-align: middle;
     display: block;
   }
 
-  img, video {
+  img, video {  
     max-width: 100%;
     height: auto;
   }
@@ -1031,6 +1030,44 @@
     .md\:text-sm {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+
+  /* Small screens - 36rem (576px) */
+  @media (width >= 36rem) {
+    .sm\:block {
+      display: block;
+    }
+  }
+
+  @media (width >= 36rem) {
+    .sm\:hidden {
+      display: none;
+    }
+  }
+
+  @media (width >= 36rem) {
+    .sm\:w-8 {
+      width: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (width >= 36rem) {
+    .sm\:h-8 {
+      height: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (width >= 36rem) {
+    .sm\:p-3 {
+      padding: calc(var(--spacing) * 3);
+    }
+  }
+
+  @media (width >= 36rem) {
+    .sm\:text-base {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
 }

@@ -113,8 +113,8 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
       <div 
         className="absolute"
         style={{ 
-          top: '22%',
-          left: '20%',
+          top: '10%',
+          left: '15%',
           zIndex: 0,
           animation: 'float 2s ease-in-out infinite',
         }}
@@ -122,7 +122,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         <img 
           src={cupidUrl} 
           alt="Cupid" 
-          className="w-20 h-20"
+          className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
         />
       </div>
@@ -131,8 +131,8 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
       <div 
         className="absolute"
         style={{ 
-          top: '22%',
-          right: '20%',
+          top: '10%',
+          right: '15%',
           zIndex: 0,
           animation: 'float 2s ease-in-out infinite',
           animationDelay: '0.5s'
@@ -141,7 +141,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         <img 
           src={cupidUrl} 
           alt="Cupid" 
-          className="w-20 h-20"
+          className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
         />
       </div>
@@ -150,8 +150,8 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
       <div 
         className="absolute"
         style={{ 
-          bottom: '22%',
-          left: '20%',
+          bottom: '10%',
+          left: '15%',
           zIndex: 0,
           animation: 'float 2s ease-in-out infinite',
           animationDelay: '1s'
@@ -160,7 +160,7 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         <img 
           src={cupidTwo} 
           alt="Cupid" 
-          className="w-20 h-20"
+          className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
         />
       </div>
@@ -169,8 +169,8 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
       <div 
         className="absolute"
         style={{ 
-          bottom: '22%',
-          right: '20%',
+          bottom: '10%',
+          right: '15%',
           zIndex: 0,
           animation: 'float 2s ease-in-out infinite',
           animationDelay: '1.5s'
@@ -179,13 +179,13 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
         <img 
           src={cupidTwo} 
           alt="Cupid" 
-          className="w-20 h-20"
+          className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
         />
       </div>
       {/* Outer dashed border - z-0 to be behind central panel */}
       <div 
-        className="absolute inset-[50px]"
+        className="absolute inset-4 md:inset-[50px]"
         style={{ 
           border: '4px dashed #EF7D57',
           borderRadius: '16px',
@@ -198,12 +198,10 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
 
       {/* Central Panel - z-10 to be in front */}
       <div 
-        className="relative rounded-2xl p-8"
+        className="relative rounded-2xl p-6 md:p-8 w-[90%] max-w-[360px]"
         style={{ 
           backgroundColor: '#543b72', // Match container background
           boxShadow: '0 0 40px rgba(255, 107, 157, 0.4), 0 0 80px rgba(255, 107, 157, 0.2), inset 0 0 20px rgba(255, 107, 157, 0.1)',
-          minWidth: '300px',
-          maxWidth: '360px',
           zIndex: 10
         }}
       >

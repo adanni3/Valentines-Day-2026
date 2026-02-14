@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import pixelHeart from '../assets/e801ac362de9eb6d95183d4fc3bf1ba8.png';
 import pixelHeartRed from '../assets/ca98284d8e2ff4cd08fc1f5ec9a0db5f.png';
-import pixelHeartPink from '../assets/d0dbd07685dc5528499d56e566d84b16.png';
+import pixelHeartPink from '../assets/d0c21e4ed9cdf9f26042e7ec5c801c5a.png';
 import cupidTwo from '../assets/6f339c0c192c91405675f4c1798c845e.png';
 import cupidOne from '../assets/1a5f1705595e0d793556155b696bcf10.png';
 import cupidThree from '../assets/bc3eec7fe727907ed612d5d117cf568d.png';
@@ -57,7 +57,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
           <img 
             src={heart.image}
             alt="heart"
-            className="w-8 h-8 opacity-80"
+            className="w-6 h-6 md:w-8 md:h-8 opacity-80"
             style={{ 
               imageRendering: 'pixelated',
               filter: 'drop-shadow(0 0 8px rgba(255, 107, 157, 0.8))'
@@ -78,7 +78,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
         <img 
           src={cupidOne}
           alt="cupid"
-          className="w-20 h-20"
+          className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
         />
       </div>
@@ -93,7 +93,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
         <img 
           src={cupidTwo}
           alt="cupid"
-          className="w-20 h-20"
+          className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated', transform: 'scaleX(-1)' }}
         />
       </div>
@@ -108,7 +108,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
         <img 
           src={cupidThree}
           alt="cupid"
-          className="w-20 h-20"
+          className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
         />
       </div>
@@ -123,7 +123,7 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
         <img 
           src={cupidThree}
           alt="cupid"
-          className="w-20 h-20"
+          className="w-12 h-12 md:w-20 md:h-20"
           style={{ imageRendering: 'pixelated' }}
         />
       </div>

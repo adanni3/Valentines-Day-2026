@@ -12,7 +12,7 @@ import { MusicPlayer } from './components/MusicPlayer';
 // Preload animation images for faster loading
 import pixelHeart from './assets/e801ac362de9eb6d95183d4fc3bf1ba8.png';
 import pixelHeartRed from './assets/ca98284d8e2ff4cd08fc1f5ec9a0db5f.png';
-import pixelHeartPink from './assets/d0dbd07685dc5528499d56e566d84b16.png';
+import pixelHeartPink from './assets/d0c21e4ed9cdf9f26042e7ec5c801c5a.png';
 import cupidOne from './assets/1a5f1705595e0d793556155b696bcf10.png';
 import cupidTwo from './assets/6f339c0c192c91405675f4c1798c845e.png';
 import cupidThree from './assets/bc3eec7fe727907ed612d5d117cf568d.png';
@@ -36,7 +36,7 @@ export interface UserData {
 
 // DEBUG: Set this to any screen to debug it in isolation
 // Options: 'welcome' | 'message' | 'no-message' | 'animation' | 'no-animation' | 'input' | 'loading' | 'congratulations'
-const DEBUG_SCREEN: Screen | null = 'welcome';
+const DEBUG_SCREEN: Screen | null = null;
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>(DEBUG_SCREEN || 'welcome');
@@ -69,10 +69,10 @@ export default function App() {
   const handleWelcomeChoice = (choice: 'yes' | 'no') => {
     setShowMusicPlayer(true); // Show music player when user starts
     if (choice === 'yes') {
-      // YES now takes the shorter path (NoAnimation → NoMessage)
+      // YES  takes the shorter path (NoAnimation → NoMessage)
       setCurrentScreen('no-animation');
     } else {
-      // NO now takes the longer romantic path (Animation → Message)
+      // NO takes the longer romantic path (Animation → Message)
       setCurrentScreen('animation');
     }
   };

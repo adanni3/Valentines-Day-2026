@@ -5,9 +5,11 @@ import { Play, Pause, Shuffle } from 'lucide-react';
 import musicCupid from '../assets/music/FIFTY FIFTY - Cupid (Twin Version) (Lyrics).mp3';
 import musicFriend from '../assets/music/A Friend Like You.mp3';
 import musicLaDaDee from '../assets/music/Cody Simpson - La Da Dee (Official Music Video).mp3';
-import musicAtlantic from '../assets/music/Eyes Blue Like The Atlantic (feat. Subvrbs).mp3';
-import musicFairytale from '../assets/music/Fairytale.mp3';
-import musicFriendInMe from "../assets/music/You've Got A Friend In Me - Randy Newman (Toy Story Edition).mp3";
+import musicGoodVibrations from '../assets/music/Good Vibrations by Ricky Reed  THE EMOJI MOVIE.mp3';
+import musicHappy from "../assets/music/Despicable Me 2 Happy Lyric Video by Pharrell Williams Illumination.mp3";
+import musicCantStopTheFeeling from "../assets/music/Justin Timberlake - Can't Stop The Feeling .mp3";
+import musicWhatILove from "../assets/music/Rio 2 Soundtrack - Track 14 - What Is Love by Janelle Monáe, Anne Hathaway, Jesse Eisenberg.mp3";
+
 
 interface MusicPlayerProps {
   isPlaying: boolean;
@@ -19,9 +21,10 @@ const MUSIC_LIST = [
   { id: 1, src: musicCupid, title: 'Cupid - FIFTY FIFTY' },
   { id: 2, src: musicFriend, title: 'A Friend Like You' },
   { id: 3, src: musicLaDaDee, title: 'La Da Dee - Cody Simpson' },
-  { id: 4, src: musicAtlantic, title: 'Eyes Blue Like The Atlantic' },
-  { id: 5, src: musicFairytale, title: 'Fairytale' },
-  { id: 6, src: musicFriendInMe, title: "You've Got A Friend In Me" },
+  { id: 4, src: musicGoodVibrations, title: 'Good Vibrations - Ricky Reed' },
+  { id: 5, src: musicHappy, title: 'Happy - Pharrell Williams' },
+  { id: 6, src: musicCantStopTheFeeling, title: "Can't Stop The Feeling - Justin Timberlake" },
+  { id: 7, src: musicWhatILove, title: 'What Is Love - Rio 2 Soundtrack' },
 ];
 
 export function MusicPlayer({ isPlaying, setIsPlaying }: MusicPlayerProps) {
@@ -105,13 +108,13 @@ export function MusicPlayer({ isPlaying, setIsPlaying }: MusicPlayerProps) {
         {/* Shuffle button */}
         <button
           onClick={handleShuffle}
-          className="bg-[#4a3b5c] border-2 border-[#ff6b9d] rounded-full p-2 hover:bg-[#5a4b6c] transition-all"
+          className="bg-[#4a3b5c] border-2 border-[#ff6b9d] rounded-full p-2 md:p-2 hover:bg-[#5a4b6c] transition-all"
           style={{
             boxShadow: '0 4px 0 #c74272, 0 8px 20px rgba(0,0,0,0.5)',
           }}
           title="Shuffle songs"
         >
-          <Shuffle className="w-5 h-5 text-[#ff6b9d]" />
+          <Shuffle className="w-5 h-5 md:w-5 md:h-5 text-[#ff6b9d]" />
         </button>
       </div>
       

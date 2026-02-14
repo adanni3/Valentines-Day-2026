@@ -7,7 +7,7 @@ interface WelcomeScreenProps {
 }
 
 export function WelcomeScreen({ onChoice }: WelcomeScreenProps) {
-  const [selectedOption, setSelectedOption] = useState<'yes' | 'no'>('yes');
+  const [selectedOption, setSelectedOption] = useState<'yes' | 'no'>('no');
 
   const handleYesClick = () => {
     onChoice('yes');
@@ -99,7 +99,7 @@ export function WelcomeScreen({ onChoice }: WelcomeScreenProps) {
               key={i}
               src={pixelHeartRed}
               alt="heart"
-              className="w-8 h-8"
+              className="w-6 h-6 md:w-8 md:h-8"
               style={{ 
                 imageRendering: 'pixelated',
                 filter: 'drop-shadow(0 0 4px rgba(255, 68, 68, 0.8))',

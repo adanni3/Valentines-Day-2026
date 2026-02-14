@@ -145,19 +145,19 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
             </div>
           ))}
 
-          <div className='flex w-full max-w-5xl mx-auto justify-center'>
+          <div className='flex w-full max-w-3xl mx-auto justify-center'>
 
 
           {/* Floating hearts decoration - positioned close to the content card */}
           <div className="absolute float z-50"
           style={{
-            top: '35%',
-            left:'20%'
+            top: '30%',
+            left: '15%'
           }}>
             <img 
               src={pixelHeart}
               alt="heart"
-              className="w-12 h-12 md:w-16 md:h-16"
+              className="w-16 h-16"
               style={{ 
                 imageRendering: 'pixelated', 
                 filter: 'drop-shadow(0 0 8px rgba(255, 107, 157, 0.8))',
@@ -166,12 +166,12 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
             />
           </div>
           <div className="absolute float z-50" style={{ animationDelay: '0.5s',
-          top: '35%',
-          right: '20%'}}>
+          top: '30%',
+          right: '15%'}}>
             <img 
               src={pixelHeart}
               alt="heart"
-              className="w-12 h-12 md:w-16 md:h-16"
+              className="w-16 h-16"
               style={{                 
                 imageRendering: 'pixelated', 
                 filter: 'drop-shadow(0 0 8px rgba(255, 68, 68, 0.8))',
@@ -182,7 +182,7 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
 
           {/* Main content */}
           <div 
-            className={`bg-[#4a3b5c] rounded-3xl p-6 md:p-10 pixel-border relative z-10 transition-all duration-1000 w-3xl ${
+            className={`bg-[#4a3b5c] rounded-3xl p-4 md:p-10 pixel-border relative z-10 transition-all duration-1000 w-90% max-w-3xl ${
               showContent ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
             }`}
           >
