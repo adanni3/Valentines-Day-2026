@@ -1,5 +1,5 @@
-/* Comic Sans MS as primary font with cursive fallback */
-/* Note: Comic Sans MS is a system font, no Google Fonts import needed */
+/* Google Fonts - Comic Neue as Comic Sans alternative for cross-platform consistency */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
 @layer properties {

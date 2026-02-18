@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-/* Comic Sans MS as primary font with cursive fallback */
-/* Note: Comic Sans MS is a system font, no Google Fonts import needed */
+/* Google Fonts - Comic Neue as Comic Sans alternative for cross-platform consistency */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
 :root {
   --retro-purple: #4a3b5c;
@@ -54,13 +54,13 @@ body {
 }
 
 /* .pixel-font {
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .cursive-font {
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 } */
