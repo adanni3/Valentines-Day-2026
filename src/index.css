@@ -1120,14 +1120,13 @@ body {
 }
 
 .pixel-font {
-  image-rendering: pixelated;
-  -webkit-font-smoothing: none;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family:  monospace;
 }
 
 .cursive-font {
-  font-family: "Dancing Script", cursive;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
