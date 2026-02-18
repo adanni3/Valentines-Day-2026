@@ -1,8 +1,7 @@
 # Valentine's Day Retro Game Screens
 
 A romantic, interactive Valentine's Day web application with retro game-inspired visuals, animations, and music. Built with React, TypeScript, and Vite.
-
-![Valentine's Day Retro Game](https://res.cloudinary.com/dwykmvdhb/image/upload/v1771048356/Pngtree_valentines_day_3d_stereo_love_19771091_hqfjq4.png)
+<img src="https://res.cloudinary.com/dwykmvdhb/image/upload/v1771048356/Pngtree_valentines_day_3d_stereo_love_19771091_hqfjq4.png" width="300" alt="Valentine's Day Retro Game">
 
 ## Features
 
