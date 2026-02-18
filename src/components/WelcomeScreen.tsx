@@ -112,13 +112,13 @@ export function WelcomeScreen({ onChoice }: WelcomeScreenProps) {
         {/* Main heading text */}
         <div className="text-center mb-12 relative z-10">
           <h1 
-            className="pixel-font text-2xl md:text-4xl text-[#ffcc00] mb-8 float leading-relaxed"
+            className="cursive-font text-2xl md:text-4xl text-[#ffcc00] mb-8 float leading-relaxed"
             style={{ 
               textShadow: '4px 4px 0 rgba(0,0,0,0.3)',
               letterSpacing: '0.05em'
             }}
           >
-            HEY LOVE,<br/>IT'S SAINT<br/>VALENTINE'S DAY
+            Hey Love,<br/>It's Saint<br/>Valentine's Day
           </h1>
         </div>
 
@@ -134,7 +134,7 @@ export function WelcomeScreen({ onChoice }: WelcomeScreenProps) {
           <button
             onClick={handleYesClick}
             onMouseEnter={() => setSelectedOption('yes')}
-            className={`pixel-font text-lg md:text-2xl transition-all ${
+            className={`cursive-font text-lg md:text-2xl transition-all ${
               selectedOption === 'yes' 
                 ? 'text-[#ffcc00] scale-110' 
                 : 'text-white opacity-50'
@@ -143,7 +143,7 @@ export function WelcomeScreen({ onChoice }: WelcomeScreenProps) {
               textShadow: selectedOption === 'yes' ? '2px 2px 0 rgba(0,0,0,0.5)' : 'none',
             }}
           >
-            YES
+            Yes
             {selectedOption === 'yes' && (
               <span className="text-[#ff6b9d] ml-2 blink">◄</span>
             )}
@@ -151,7 +151,7 @@ export function WelcomeScreen({ onChoice }: WelcomeScreenProps) {
           <button
             onClick={handleNoClick}
             onMouseEnter={() => setSelectedOption('no')}
-            className={`pixel-font text-lg md:text-2xl transition-all ${
+            className={`cursive-font text-lg md:text-2xl transition-all ${
               selectedOption === 'no' 
                 ? 'text-[#ffcc00] scale-110' 
                 : 'text-white opacity-50'
@@ -160,7 +160,7 @@ export function WelcomeScreen({ onChoice }: WelcomeScreenProps) {
               textShadow: selectedOption === 'no' ? '2px 2px 0 rgba(0,0,0,0.5)' : 'none',
             }}
           >
-            NO
+            No
             {selectedOption === 'no' && (
               <span className="text-[#ff6b9d] ml-2 blink">◄</span>
             )}

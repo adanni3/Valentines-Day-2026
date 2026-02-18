@@ -112,7 +112,7 @@ export function MusicPlayer({ isPlaying, setIsPlaying }: MusicPlayerProps) {
       />
        
       <div className="relative -bottom-6 left-0 w-full text-center">
-        <span className="pixel-font text-[9px] text-[#ff6b9d] opacity-70 whitespace-nowrap overflow-hidden text-ellipsis max-w-[120px] inline-block">
+        <span className="cursive-font text-[9px] text-[#ff6b9d] opacity-70 whitespace-nowrap overflow-hidden text-ellipsis max-w-[120px] inline-block">
           {isPlaying ? `♪ ${currentTitle}` : currentTitle}
         </span>
       </div>

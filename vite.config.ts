@@ -2,8 +2,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
+
+
 export default defineConfig({
   plugins: [react()],
+  base: '/Valentines-Day-2026/',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {

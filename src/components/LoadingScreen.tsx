@@ -224,13 +224,13 @@ export function LoadingScreen({ onNext, userData }: LoadingScreenProps) {
               }}
             />
             <h2 
-              className="pixel-font text-white text-sm p-3 "
+              className="cursive-font text-white text-sm p-3 "
               style={{ 
                 textShadow: '2px 2px 0 rgba(0,0,0,0.3)',
                 letterSpacing: '0.15em'
               }}
             >
-              VALENTINE'S DAY
+              Valentine's Day
             </h2>
           </div>
         </div>

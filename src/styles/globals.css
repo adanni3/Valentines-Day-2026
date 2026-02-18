@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'PixelFont';
-  src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-}
+/* Comic Sans MS as primary font with cursive fallback */
+/* Note: Comic Sans MS is a system font, no Google Fonts import needed */
 
 :root {
   --retro-purple: #4a3b5c;
@@ -56,9 +54,14 @@ body {
 }
 
 .pixel-font {
-  font-family: 'Press Start 2P', cursive;
-  image-rendering: pixelated;
-  -webkit-font-smoothing: none;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cursive-font {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 

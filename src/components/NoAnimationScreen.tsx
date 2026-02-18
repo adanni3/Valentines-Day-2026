@@ -81,13 +81,13 @@ export function NoAnimationScreen({ onNext }: NoAnimationScreenProps) {
             }}
           />
           <h2 
-            className="pixel-font text-lg md:text-2xl text-[#ff6b9d] mb-3"
+            className="cursive-font text-lg md:text-2xl text-[#ff6b9d] mb-3"
             style={{ 
               textShadow: '3px 3px 0 rgba(0,0,0,0.3)',
               letterSpacing: '0.1em'
             }}
           >
-            THAT'S OKAY
+            That's Okay
           </h2>
           <p className="pixel-font text-xs text-white opacity-80 mb-4">
             WE'LL STILL MAKE THIS DAY SPECIAL

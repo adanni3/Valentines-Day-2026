@@ -38,14 +38,13 @@ Enjoy this special Valentine's Day 💗`;
       <div className="bg-black rounded-lg p-8 md:p-12 border-4 border-[#333333] relative">
         {/* Terminal-style header */}
         <div className="absolute top-2 left-2 pixel-font text-[8px] text-green-400">
-          Small_building.exe
+          Large_heart.exe
         </div>
 
         {/* Message text */}
         <div 
-          className="text-white text-sm md:text-base leading-relaxed whitespace-pre-line min-h-[300px]"
+          className="cursive-font text-white text-sm md:text-base leading-relaxed whitespace-pre-line min-h-[300px]"
           style={{ 
-            fontFamily: 'monospace',
             textShadow: '0 0 2px rgba(255,255,255,0.5)'
           }}
         >
@@ -58,17 +57,17 @@ Enjoy this special Valentine's Day 💗`;
         {/* Gift message */}
         {showContinue && (
           <div className="text-center mt-6">
-            <p className="pixel-font text-xs text-[#ff6b9d] mb-4 leading-relaxed">
+            <p className="cursive-font text-xs text-[#ff6b9d] mb-4 leading-relaxed">
               Here is a special Valentine's gift for you
             </p>
             <button
               onClick={onNext}
-              className="pixel-font text-xs px-6 py-3 bg-[#ff6b9d] text-white rounded hover:bg-[#ff4477] transition-colors blink"
+              className="cursive-font text-xs px-6 py-3 bg-[#ff6b9d] text-white rounded hover:bg-[#ff4477] transition-colors blink"
               style={{ 
                 boxShadow: '0 4px 0 #c74272',
               }}
             >
-              TAP TO SEE
+              Tap to See
             </button>
           </div>
         )}

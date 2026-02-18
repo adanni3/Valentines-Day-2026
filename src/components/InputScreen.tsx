@@ -50,13 +50,13 @@ export function InputScreen({ onSubmit, onMusicPlayerReady }: InputScreenProps) 
             }}
           />
           <h2 
-            className="pixel-font text-xl md:text-3xl text-[#ffcc00] mb-4 leading-relaxed"
+            className="cursive-font text-xl md:text-3xl text-[#ffcc00] mb-4 leading-relaxed"
             style={{ 
               textShadow: '3px 3px 0 rgba(0,0,0,0.3)',
               letterSpacing: '0.05em'
             }}
           >
-            TRYING TO SET THE MOOD FOR YOUR GIFT😏
+            Trying to set the mood for your gift😏
           </h2>
           <p className="pixel-font text-xs text-white opacity-80">
            ♪  Make sure some tunes are playing ♪
@@ -69,9 +69,9 @@ export function InputScreen({ onSubmit, onMusicPlayerReady }: InputScreenProps) 
         {/* Image upload */}
         <div className="mb-8 text-center">
           <label className="pixel-font text-xs text-[#ff6b9d] mb-3 block leading-relaxed">
-            LET ME BORROW A CUTE PIC OF YOURS🥺🙏,<br/>
-            MAKE SURE IT IS BRIGHT AND YOU LOOK NICE😁,<br/>
-            TRUST ME IT WILL BE FUN😂
+            Let me borrow a cute pic of yours🥺🙏,<br/>
+            Make sure it is bright and you look nice😁,<br/>
+            Trust me it will be fun😂
           </label>
           <input
             ref={fileInputRef}
@@ -105,13 +105,13 @@ export function InputScreen({ onSubmit, onMusicPlayerReady }: InputScreenProps) 
 
         {/* Submit button */}
         <div className="text-center">
-          <p className="pixel-font text-xs text-[#ff6b9d] mb-3">
-            ALL DONE? THEN LET'S GO😁
+          <p className="cursive-font text-xs text-[#ff6b9d] mb-3">
+            All done? Then let's go😁
           </p>
           <button
             onClick={handleSubmit}
             disabled={!image}
-            className={`pixel-font text-sm px-8 py-4 rounded-lg transition-all ${
+            className={`cursive-font text-sm px-8 py-4 rounded-lg transition-all ${
               image
                 ? 'bg-[#ff6b9d] text-white hover:bg-[#ff4477] cursor-pointer'
                 : 'bg-gray-600 text-gray-400 cursor-not-allowed'
@@ -120,7 +120,7 @@ export function InputScreen({ onSubmit, onMusicPlayerReady }: InputScreenProps) 
               boxShadow: image ? '0 4px 0 #c74272, 0 8px 20px rgba(0,0,0,0.3)' : 'none',
             }}
           >
-            {image ? '🚀 FIRE AWAY' : 'UPLOAD IMAGE TO CONTINUE'}
+            {image ? '🚀 Fire Away' : 'Upload Image to Continue'}
           </button>
         </div>
       </div>

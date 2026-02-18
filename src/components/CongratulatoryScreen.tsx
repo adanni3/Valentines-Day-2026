@@ -202,13 +202,13 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
                   style={{ borderRadius: '0 0 8px 8px'  }}
                 />
                 <h1 
-                  className="pixel-font text-lg md:text-2xl text-white text-center"
+                  className="cursive-font text-lg md:text-2xl text-white text-center"
                   style={{ 
                     textShadow: '3px 3px 0 rgba(0,0,0,0.3)',
                     letterSpacing: '0.05em'
                   }}
                 >
-                  HAPPY VALENTINE'S DAY
+                  Happy Valentine's Day
                 </h1>
                 {/* Ribbon ends */}
                 <div 
@@ -261,31 +261,31 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
                       {/* Floating download button at bottom-right */}
                       <button
                         onClick={handleDownload}
-                        className="absolute -bottom-2 -right-2 pixel-font text-xs px-3 py-2 bg-[#ff6b9d] text-white rounded-lg hover:bg-[#ff4477] transition-colors flex items-center gap-2 z-10"
+                        className="absolute -bottom-2 -right-2 cursive-font text-xs px-3 py-2 bg-[#ff6b9d] text-white rounded-lg hover:bg-[#ff4477] transition-colors flex items-center gap-2 z-10"
                         style={{ 
                           boxShadow: '0 4px 0 #c74272, 0 8px 20px rgba(0,0,0,0.3)',
                         }}
                       >
                         <Download className="w-4 h-4" />
-                        <span className="hidden md:inline">DOWNLOAD</span>
+                        <span className="hidden md:inline">Download</span>
                       </button>
                     </div>
                   </div>
                 )}
                 
 
-                <p className="pixel-font text-xs text-white mb-3 leading-relaxed max-w-md mx-auto mt-6">
-                  HERE'S A RETRO🕹 PIXEL IMAGE OF YOU<br/>
-                  WASN'T THAT FUN TO SEE 😄.<br/>
+                <p className="cursive-font text-xs text-white mb-3 leading-relaxed max-w-md mx-auto mt-6">
+                  Here's a retro🕹 pixel image of you<br/>
+                  Wasn't that fun to see 😄.
                 </p>
-                <p className="pixel-font text-xs text-white mb-4 leading-relaxed max-w-md mx-auto mt-3">
-                  YOU WOULD HAVE BEEN AS CUTE THEN<br/>
-                  AS YOU ARE NOW🤗
+                <p className="cursive-font text-xs text-white mb-4 leading-relaxed max-w-md mx-auto mt-3">
+                  You would have been as cute then<br/>
+                  as you are now🤗
                 </p>
 
                 <div className="mb-6">
-                  <p className="pixel-font text-sm text-[#ffcc00]">
-                    BEAUTY POINTS: INFINITE ✨
+                  <p className="cursive-font text-sm text-[#ffcc00]">
+                    Beauty Points: Infinite ✨
                   </p>
                 </div>
 
@@ -311,12 +311,12 @@ export function CongratulatoryScreen({ userData, onRestart }: CongratulatoryScre
                 {/* Play again button */}
                 <button
                   onClick={onRestart}
-                  className="pixel-font text-sm px-8 py-3 bg-[#ff6b9d] text-white rounded-lg hover:bg-[#ff4477] transition-colors"
+                  className="cursive-font text-sm px-8 py-3 bg-[#ff6b9d] text-white rounded-lg hover:bg-[#ff4477] transition-colors"
                   style={{ 
                     boxShadow: '0 4px 0 #c74272, 0 8px 20px rgba(0,0,0,0.3)',
                   }}
                 >
-                  ► PLAY AGAIN
+                  ► Play Again
                 </button>
               </div>
             

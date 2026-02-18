@@ -141,13 +141,13 @@ export function AnimationScreen({ onNext }: AnimationScreenProps) {
             }}
           />
           <h2 
-            className="pixel-font text-xl md:text-3xl text-[#ffcc00] mb-3"
+            className="cursive-font text-xl md:text-3xl text-[#ffcc00] mb-3"
             style={{ 
               textShadow: '3px 3px 0 rgba(0,0,0,0.3)',
               letterSpacing: '0.1em'
             }}
           >
-            LOVE ACTIVATED
+            Love Activated
           </h2>
           <p className="pixel-font text-xs text-white opacity-80">
             Loading your destiny...
